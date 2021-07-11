@@ -6,7 +6,7 @@ import GalleryList from '../GalleryList/GalleryList';
 
 
 function App() {
-  let [galleryItems, setGalleryItems] = useState([]);
+  let [galleryPhotos, setGalleryPhotos] = useState([]);
 
   useEffect(() => {
     console.log("in useEffect");
@@ -17,25 +17,26 @@ function App() {
     axios({
       method: 'GET',
       url: '/gallery'
-    }).then( (response) => {
+    }).then(response => {
       console.log('in getItems');
       console.log(response.data);
-      setGalleryItems(response.data);
+      setGalleryPhotos(response.data);
     }).catch( (error) => {
       alert('Error getting photos')
       console.log(error)
     });
   }
 
-  const updateLikes = (id, likes) => {
-    axios.put(`/gallery/like/${id}`, {likes:likes})
-    .then(response => {
-      getItems();
-    })
-    .catch(error => {
-      console.log('unable to add like', error);
-    });
-  }
+  // const updateLikes = (photo) => {
+  //   console.log(photo);
+  //   axios.put(`/gallery/like/${photo.id}`, {likes:photo.likes})
+  //   .then(response => {
+  //     getItems();
+  //   })
+  //   .catch(error => {
+  //     console.log('unable to add like', error);
+  //   });
+  // }
 
     return (
       <div className="App">
@@ -43,10 +44,16 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <GalleryList galleryItems={galleryItems} />
+        <GalleryList galleryPhotos={galleryPhotos} />
+        
         
       </div>
     );
 }
 
 export default App;
+
+
+// {galleryPhotos.map(photo =>
+//   (<GalleryItem key={photo.id} photo={photo} />
+//   ))}

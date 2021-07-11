@@ -8,3 +8,18 @@
 //function handleLikes
 
 // const [likeCount, setLikeCount] = useState(0);
+function GalleryItem({image}){
+
+
+    return (
+        <>
+        <section className="galleryItem">
+        <img src={image.path} alt={image.description} height='100px' width='auto'/>
+        <button type='button' onClick>Likes {image.likes}</button>
+        </section>
+        </>
+    )
+
+}
+
+export default GalleryItem;

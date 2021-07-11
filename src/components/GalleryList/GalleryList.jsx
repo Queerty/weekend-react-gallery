@@ -1,16 +1,26 @@
 //collection of images displayed
 import "./GalleryList.css";
-function GalleryList({galleryItems}){
+import GalleryItem from "../GalleryItem/GalleryItem";
+
+
+
+function GalleryList(props){
+    console.log('Whats in my galleryList:', props );
+    // console.log(props.galleryPhotos[0].description);
+    
     return(
     <>
-        <h2>All these photos:</h2>
-          <section>{galleryItems.map((photo) => (
-              <img src={photo.path} key={photo.id} width='100px' height='auto'/>
-            //   <button type= "button" key={photo.id} className="likesButton"> Likes: `{photo.likes}` </button>
-              ))}
-              </section>
+        <div className="galleryItem">
+        <p>Testing from Gallery List</p>
+       
+        {props.galleryPhotos.map(image =>
+        <GalleryItem key={image.id} image={image}/>)
+        }
+    </div>
+             
     </>
     )
+    
 }
 
 export default GalleryList;

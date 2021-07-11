@@ -1,7 +1,7 @@
 const galleryItems = [
     { id: 1, path: 'images/firstGrade.JPG', description: 'Photo of me in first grade.', likes: 0 },
     { id: 2, path: 'images/bedConcert.JPG', description: 'Bed concert right before Otto was born.', likes: 0 },
-    { id:3, path: 'images/Last100k.JPG', description: 'Marked the last 100K for my walk across Spain', likes: 0 },
+    { id:3, path: 'images/caminopath.jpeg', description: 'Section of the road along the Camino de Santiago, Spain', likes: 0 },
     { id:4, path: 'images/CaminoView.JPG', description: 'View from a small monastery detour on the Camino', likes: 0 },
     { id:5, path: 'images/cathedral.jpeg', description: 'St James Cathedral, traditional stopping point for the Camino de Santiago', likes: 0 },
     { id:6, path: 'images/Last100k.JPG', description: 'Marked the last 100K for my walk across Spain', likes: 0 },

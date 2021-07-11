@@ -9,6 +9,8 @@
 
 // const [likeCount, setLikeCount] = useState(0);
 import { useState } from "react";
+import './GalleryItem.css';
+
 function GalleryItem({image, updateLikes}){
 
     const [display, setDisplay] = useState(true);
@@ -21,13 +23,15 @@ function GalleryItem({image, updateLikes}){
 
     return (
         <>
-        <section onClick={() => toggleDisplay(image.id)}  className="galleryItem">
+        <div className="galleryItem">
+        <section onClick={() => toggleDisplay(image.id)}>
             { display &&
         <img src={image.path} alt={image.description} height='100px' width='auto'/>}
             { !display &&
-            <p>{image.description}</p>}
-        <button type='button' onClick={() => updateLikes(image.id)}>Likes {image.likes}</button>
+            <div className= "square">{image.description}</div>}
         </section>
+        <button className="button" type='button' onClick={() => updateLikes(image.id)}>Likes {image.likes}</button>
+       </div>
         </>
     )
 

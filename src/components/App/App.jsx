@@ -28,7 +28,6 @@ function App() {
   }
 
   const updateLikes = (id) => {
-    //axios.put(`/gallery/like/${id}`, {likes:galleryItem.likes})
 
     axios.put(`/gallery/like/${id}`)
     .then(response => {
@@ -44,7 +43,6 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
         <GalleryList galleryPhotos={galleryPhotos} updateLikes={updateLikes} />
         
         
@@ -53,8 +51,3 @@ function App() {
 }
 
 export default App;
-
-
-// {galleryPhotos.map(photo =>
-//   (<GalleryItem key={photo.id} photo={photo} />
-//   ))}

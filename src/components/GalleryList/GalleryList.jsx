@@ -11,9 +11,7 @@ function GalleryList(props){
     
     return(
     <>
-        <div className="galleryItem">
-        <p>Testing from Gallery List</p>
-       
+        <div className="galleryItem">       
         {props.galleryPhotos.map(image =>
         <GalleryItem key={image.id} image={image} updateLikes={props.updateLikes} />)
         }

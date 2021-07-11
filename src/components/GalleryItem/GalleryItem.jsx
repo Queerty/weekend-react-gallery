@@ -23,15 +23,15 @@ function GalleryItem({image, updateLikes}){
 
     return (
         <>
-        <div className="galleryItem">
-        <section onClick={() => toggleDisplay(image.id)}>
+       
+        <section onClick={() => toggleDisplay(image.id)} className="photo">
             { display &&
-        <img src={image.path} alt={image.description} height='100px' width='auto'/>}
+        <img src={image.path} alt={image.description} class="img-thumbnail" width="200" height="auto"/>}
             { !display &&
             <div className= "square">{image.description}</div>}
         </section>
-        <button className="button" type='button' onClick={() => updateLikes(image.id)}>Likes {image.likes}</button>
-       </div>
+        <button className="btn btn-success btn-sm" type='button' onClick={() => updateLikes(image.id)}>Likes {image.likes}</button>
+       
         </>
     )
 

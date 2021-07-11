@@ -1,11 +1,5 @@
-div.galleryItem {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  }
+.galleryItem{
+    margin: 50px;
+}
 
-  div.galleryItem img {
-    width: 100%;
-    height: auto;
-  }
+

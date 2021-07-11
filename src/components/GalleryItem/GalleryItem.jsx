@@ -26,7 +26,7 @@ function GalleryItem({image, updateLikes}){
        
         <section onClick={() => toggleDisplay(image.id)} className="photo">
             { display &&
-        <img src={image.path} alt={image.description} class="img-thumbnail" width="200" height="auto"/>}
+        <img src={image.path} alt={image.description} class="img-thumbnail" width="400" height="auto"/>}
             { !display &&
             <div className= "square">{image.description}</div>}
         </section>

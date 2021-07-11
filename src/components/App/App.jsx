@@ -27,16 +27,17 @@ function App() {
     });
   }
 
-  // const updateLikes = (photo) => {
-  //   console.log(photo);
-  //   axios.put(`/gallery/like/${photo.id}`, {likes:photo.likes})
-  //   .then(response => {
-  //     getItems();
-  //   })
-  //   .catch(error => {
-  //     console.log('unable to add like', error);
-  //   });
-  // }
+  const updateLikes = (id) => {
+    //axios.put(`/gallery/like/${id}`, {likes:galleryItem.likes})
+
+    axios.put(`/gallery/like/${id}`)
+    .then(response => {
+      getItems();
+    })
+    .catch(error => {
+      console.log('unable to add like', error);
+    });
+  }
 
     return (
       <div className="App">
@@ -44,7 +45,7 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <GalleryList galleryPhotos={galleryPhotos} />
+        <GalleryList galleryPhotos={galleryPhotos} updateLikes={updateLikes} />
         
         
       </div>

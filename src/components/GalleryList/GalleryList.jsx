@@ -7,6 +7,7 @@ import GalleryItem from "../GalleryItem/GalleryItem";
 function GalleryList(props){
     console.log('Whats in my galleryList:', props );
     // console.log(props.galleryPhotos[0].description);
+    console.log('updateLikes function', props.updateLikes);
     
     return(
     <>
@@ -14,7 +15,7 @@ function GalleryList(props){
         <p>Testing from Gallery List</p>
        
         {props.galleryPhotos.map(image =>
-        <GalleryItem key={image.id} image={image}/>)
+        <GalleryItem key={image.id} image={image} updateLikes={props.updateLikes} />)
         }
     </div>
              

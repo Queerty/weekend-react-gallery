@@ -84,7 +84,7 @@ const galleryItems = [
   {
     id: 14,
     path: "images/Mostrecent.JPG",
-    description: `My partner and I at the farmers' market`,
+    description: `My partner and me at the farmers' market`,
     likes: 0,
   },
 ];

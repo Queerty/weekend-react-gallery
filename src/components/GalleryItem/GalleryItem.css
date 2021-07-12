@@ -1,21 +1,17 @@
-.square{
-
-    width: 400px;
-    height: 400px;
-    border: 2px solid grey;
-    border-radius: 8px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.square {
+  width: 400px;
+  height: 400px;
+  border: 2px solid grey;
+  border-radius: 8px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button{
-    margin-top: 4px;
-    margin-bottom: 20px;
+button {
+  margin-top: 4px;
+  margin-bottom: 20px;
 }
-
-
-
